@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100,200,300,400,500,600&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+$red:#ed2d34;
+$black:#444;
+$white:#fff;
+$light-color:#666;
+$border: .2rem solid $black;
+
+@mixin grid($val) {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:2rem;
+}
+
+@mixin flex($align) {
+    display: flex;
+    align-items: $align;
+    flex-wrap: wrap;
+    gap:3rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size:$titleSize;
+    color:$white;
+    text-transform: capitalize;
+}
+
+@mixin graphText($graphSize) {
+    font-size:$graphSize;
+    color:$white;
+    line-height: 2;
+    padding:1rem 0;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar{
+        width:1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: #666;
+    }
+}
+
+body{
+    background: url(Images/bgd.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &.active{
+        padding-left: 0;
+    }
+}
+
+.header{
+    position: position;
+    top:0; left:-31rem;
+    height: 100%;
+    width: 30rem;
+    background: #666;
+    padding:2rem;
+    z-index: 1000;
+
+    .logo{
+        font-size: 2.5rem;
+        color:$white;
+        font-weight: bolder;
+    }
+
+    .navbar{
+        padding:30% 0;
+
+        a{
+            display: block;
+            margin: 2rem 0;
+            font-size: 2rem;
+            color: #fff;
+
+            &:hover{
+                text-decoration: underline;
+                text-underline-offset: .7rem;
+            }
+        }
+    }
+
+    .share{
+        text-align: center;
+
+        a{
+            height: 5rem;
+            width: 5rem;
+            line-height: 5rem;
+            font-size: 2rem;
+            color:$black;
+            background:$white;
+            margin:0.3rem;
+
+            &:hover{
+                background:#666;
+                color:#fff;
+            }
+        }
+    }
+
+    .credit{
+        text-align: center;
+        font-size: 2rem;
+        color:#fff;
+        margin-top: 3rem;
+        line-height: 1.5;
+    }
+}
+
+#menu-btn{
+    position: fixed;
+    top:2rem; left:2rem;
+    background:$red;
+    color: #fff;
+    height: 5rem;
+    width:5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    cursor:pointer;
+    z-index: 1100;
+    text-align: center;
+
+    &.fa-times{
+        top:1rem; left:25rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1200px){
+
+    body.active{
+        padding-left: 0;
+    }
+
+    header.active{
+        box-sizing: 0 0 0 100vw rgba;
+    }
+}
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+}
+
